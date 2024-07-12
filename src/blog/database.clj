@@ -16,14 +16,10 @@
   (let [posts-map (get-posts "resources")
         posts-path (keys posts-map)
         posts-content (vals posts-map)
-        posts-time (map #(.lastModified (java.io.File.
-                                         (str "./resources" %)))
-                        posts-path)
         posts (map #(md/parse (str %1 %2))
                    (map #(str ":post/path " % "\n")
                         posts-path)
-                   posts-content)
-        posts (map #(assoc %1 :post/time %2) posts posts-time)]
+                   posts-content)]
     @(d/transact conn posts)))
 
 (defn db-conn []
@@ -34,7 +30,11 @@
 
 (def all-titles-q '[:find ?post-title
                       :where
-                      [_ :post/title ?post-title]])
+                    [_ :post/title ?post-title]])
+
+(def all-times-q '[:find ?post-title
+                      :where
+                      [_ :post/time ?post-time]])
 
 (def all-paths-q '[:find ?post-path
                      :where
@@ -57,15 +57,6 @@
        (map #(str ":post/path " % "\n")
             (keys (get-posts "resources")))
        (vals (get-posts "resources")))
-
-  #_(->> (d/q '[:find ?e ?p
-                :in $
-                :where
-                [?e :browsable/kind :page/tech-post]
-                [?e :blog/published ?p]]
-              db)
-         (sort-by second)
-         reverse)
     
   (def path "posts/test.md")
   (def res (io/resource path))

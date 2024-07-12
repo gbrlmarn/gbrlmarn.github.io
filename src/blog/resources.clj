@@ -12,12 +12,10 @@
 (defn get-assets []
   (assets/load-assets "public" ["/cv/gmarin.pdf"]))
 
-(defn read-and-convert-posts! [src]
+(defn read-and-convert-posts! [src db]
   (let [data  (stasis/slurp-directory src #"/posts/.*\.md$")
         posts-paths (map posts/key-to-html (keys data))
-        posts-content (map md/md-to-html-string
-                          (map #(:post/body (mp/parse %))
-                               (vals data)))]
+        posts-content (posts/format-posts db)]
     (zipmap posts-paths posts-content)))
 
 (defn get-public-map []
@@ -36,15 +34,15 @@
         html-vals (map layout/apply-header-footer (vals up-m))]
     (zipmap html-keys html-vals)))
 
-(defn merge-website-assets! [src db]
-  (let [page-map (format-pages (read-and-convert-posts! "resources")
+(defn merge-website-assets! [db]
+  (let [page-map (format-pages (read-and-convert-posts! "resources" db)
                                db)
         css-map (get-css "resources")]
     (stasis/merge-page-sources {:css css-map
                                 :pages page-map})))
 
 (defn get-pages [db]
-  (merge-website-assets! "resources" db))
+  (merge-website-assets! db))
 
 (comment
   )

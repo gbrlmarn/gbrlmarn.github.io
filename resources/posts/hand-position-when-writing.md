@@ -1,8 +1,7 @@
 :post/title Hand position when writing
-
+:post/time 2023-05-06T23:29:51+03:00
 :post/body
 # Hand position when writing
-
 
 After a lot of typing my wrist started to hurt.
 So I done some research and found out that the best way
