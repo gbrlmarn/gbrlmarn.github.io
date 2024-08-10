@@ -1,52 +1,52 @@
 #+SETUPFILE: template.org
 
 * *Gabriel Marin*
-#+ATTR_LATEX: :environment tabular :align {p{3cm}|p{13cm}}
-| Email  | [[mailto:marin.gabriel@protonmail.com][marin.gabriel@protonmail.com]] |
-| Github | [[https://github.com/gbrlmarn][github.com/gbrlmarn]] |
-| Site   | [[https://gbrlmarn.github.io][gbrlmarn.github.io]] |
-#+ATTR_LATEX: :environment tabular :align {p{3cm}|p{13cm}}
-| About | Hello, I'm a software engineer with a background in networking |
-|       | and programming, passionate about open source software,        |
-|       | programming languages and cardistry.                           |
-
-
-
+#+ATTR_LATEX: :environment tabular :align {>{\raggedleft}p{2.3cm}|p{14cm}}
+| Email    | [[mailto:marin.gabriel@protonmail.com][marin.gabriel@protonmail.com]]            |
+| Github   | [[https://github.com/gbrlmarn][github.com/gbrlmarn]]                     |
+| Linkedin | [[https://linkedin.com/in/maringabriel][linkedin.com/in/maringabriel]]            |
+| Website  | [[https://gbrlmarn.github.io][gbrlmarn.github.io]]                      |
 ** *Experience*
-#+ATTR_LATEX: :environment tabular :align {p{3cm}|p{13cm}}
-| 2022-Present | *Software Engineer* at Luxoft, Bucharest                         |
-|              | Maintained project building environment using CMake              |
-|              | Done socket programming using ZeroMQ library in C/C++            |
-|              | Automated environment configuration using Docker and Bash        |
-|              | Created integration tests using Golang and Clojure               |
-|              | Developed command line interface for sending/receiving messages  |
-|              | Developed certificate viewer in C++ using OpenSSL API            |
-#+ATTR_LATEX: :environment tabular :align {p{3cm}|p{13cm}}
-| 2021-2022 | *Software Engineer* at Continental, Sibiu                            |
-|           | Worked on XML generator using Java and AUTOSAR library               |
-|           | Converted JSON to XML data using Python  |
-#+ATTR_LATEX: :environment tabular :align {p{3cm}|p{13cm}} 
-|    2019-2021 | *System Engineer* at Ministry of Internal Affairs, Rm.Valcea         |
-|              | Developed scripts for task automation with PowerShell                |
-|              | Deployed and configured Radius server and Squid proxy                |
-|    2018-2019 | *Middleware Engineer* at Ministry of Internal Affairs, Bucharest     |
-|              | Provided layer 1 support                                             |
-|              | Managed users access in Oracle SQL database                          |
+#+ATTR_LATEX: :environment tabular :align {>{\raggedleft}p{2.3cm}|p{14cm}}
+| 2022-Present | *Software Engineer* at Luxoft, Bucharest                           |
+|              | Maintained project building environment using CMake.               |
+|              | Done socket programming using ZeroMQ library in C/C++.             |
+|              | Automated environment configuration using Docker and Bash.         |
+|              | Created integration tests using Golang and Clojure.                |
+|              | Developed command line interface for sending/receiving messages.   |
+|              | Developed certificate viewer in C++ using OpenSSL API.             |
+|              | Refactored multiple repositories according to coding guidelines.   |
+#+ATTR_LATEX: :environment tabular :align {>{\raggedleft}p{2.3cm}|p{14cm}}
+| 2021-2022 | *Software Engineer* at Continental, Sibiu                 |
+|           | Worked on XML generator using Java and AUTOSAR library.   |
+|           | Converted JSON to XML data using Python.                  |
+#+ATTR_LATEX: :environment tabular :align {>{\raggedleft}p{2.3cm}|p{14cm}} 
+| 2019-2021 | *System Engineer* at Ministry of Internal Affairs, Rm.Valcea     |
+|           | Developed scripts for task automation with PowerShell.           |
+|           | Deployed and configured Radius server and Squid proxy.           |
+| 2018-2019 | *Middleware Engineer* at Ministry of Internal Affairs, Bucharest |
+|           | Provided layer 1 support.                                        |
+|           | Managed users access in Oracle SQL database.                     |
 
 ** *Education*
-#+ATTR_LATEX: :environment tabular :align {p{3cm}|p{13cm}}
-|   2018-2020 | Master's in Telecommunications Engineering at     |
-|             | Military Technical Academy, Bucharest             |
-|   2014-2018 | Bachelor's in Telecommunications Engineering at   |
-|             | Military Technical Academy, Bucharest             |
+#+ATTR_LATEX: :environment tabular :align {>{\raggedleft}p{2.3cm}|p{14cm}}
+| 2018-2020 | *Master's in Telecommunications Engineering*   |
+|           | Military Technical Academy, Bucharest          |
+| 2014-2018 | *Bachelor's in Telecommunications Engineering* |
+|           | Military Technical Academy, Bucharest          |
 ** *Skills*
-#+ATTR_LATEX: :environment tabular :align {p{3cm}|p{13cm}}
-| Programming   | C/C++, Go, Clojure, Scheme, Common Lisp, Bash,   |
-| Languages     | Python, Java, JavaScript, Rust, SQL, PowerShell, |
-|               | Perl, Elixir, Erlang                             |
-#+ATTR_LATEX: :environment tabular :align {p{3cm}|p{13cm}}
-| Tools | Linux, /Emacs/, Coreutils, Vim, Git, CMake, Org, Tmux, Datomic |
-|       | LaTeX, Docker, Make, ZeroMQ, Hugo, Leiningen, Babashka, Guix,  |
-|       | HTML/CSS, Django, React, Maven, PlantUML, Terraform, RabbitMQ  |
-#+ATTR_LATEX: :environment tabular :align {p{3cm}|p{13cm}}
-| Languages | Romanian, English, Italian |
+*** *Programming Languages*
+#+ATTR_LATEX: :environment tabular :align {>{\raggedleft}p{2.3cm}|p{14cm}}
+| ●●●●○ | C/C++, Go, Clojure                               |
+| ●●●○○ | Python, Java, JavaScript, Rust, SQL, Lisp, Bash  |
+| ●○○○○ | Elixir, Erlang, Perl, Ruby, PowerShell           |
+*** *Tools*
+#+ATTR_LATEX: :environment tabular :align {>{\raggedleft}p{2.3cm}|p{14cm}}
+| ●●●●○ | Linux, Emacs, Coreutils, Git, CMake, Vim, Tmux, Org, LaTeX     |
+| ●●●○○ | Docker, Make, ZeroMQ, Hugo, Leiningen, Babashka, Guix, Datomic |
+| ●○○○○ | HTML/CSS, Django, React, Maven, PlantUML, Terraform, RabbitMQ  |
+*** *Languages*
+#+ATTR_LATEX: :environment tabular :align {>{\raggedleft}p{2.3cm}|p{14cm}}
+| ●●●●● | Romanian |
+| ●●●●○ | English  |
+| ●●●○○ | Italian  |
