@@ -1,0 +1,14 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.0"}
+        stasis/stasis {:mvn/version "2023.11.21"}
+        markdown-clj/markdown-clj {:mvn/version "1.12.1"}
+        hiccup/hiccup {:mvn/version "2.0.0-RC3"}
+        ring/ring {:mvn/version "1.12.1"}
+        optimus/optimus {:mvn/version "2023.11.21"}
+        com.datomic/datomic-free {:mvn/version "0.9.5697"}
+        mapdown/mapdown {:mvn/version "0.2.1"}
+        mount/mount {:mvn/version "0.1.19"}
+        prone/prone {:mvn/version "2021-04-23"}}
+ :aliases
+ {:server {:main-opts ["-m" "blog.dev"]}
+  :build {:exec-fn blog.core/export!}}}

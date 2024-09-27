@@ -23,6 +23,7 @@
     @(d/transact conn posts)))
 
 (defn db-conn []
+  (d/delete-database "datomic:mem://blog")
   (d/create-database "datomic:mem://blog")
   (let [conn (d/connect "datomic:mem://blog")]
     (d/transact conn (read-string (slurp (io/resource "schema.edn"))))
