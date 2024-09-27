@@ -13,16 +13,16 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Install dependencies
-        uses: sudo apt install curl rlwrap  --yes
+        run: sudo apt install curl rlwrap  --yes
         
       - name: Install Clojure
-        uses: |
+        run: |
               curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh
               chmod +x linux-install.sh
               sudo ./linux-install.sh
 
       - name: Build site
-        uses: clojure -X:build
+        run: clojure -X:build
 
       - name: Publish generated content to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
