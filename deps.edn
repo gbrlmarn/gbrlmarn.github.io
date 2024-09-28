@@ -8,7 +8,8 @@
         com.datomic/datomic-free {:mvn/version "0.9.5697"}
         mapdown/mapdown {:mvn/version "0.2.1"}
         mount/mount {:mvn/version "0.1.19"}
-        prone/prone {:mvn/version "2021-04-23"}}
+        prone/prone {:mvn/version "2021-04-23"}
+        dawran6/emoji {:mvn/version "0.1.5"}}
  :aliases
  {:server {:main-opts ["-m" "blog.dev"]}
   :build {:exec-fn blog.core/export!}}}

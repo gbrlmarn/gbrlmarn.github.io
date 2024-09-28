@@ -6,6 +6,7 @@
             [hiccup.core :as hiccup]
             [markdown.core :as md]
             [mapdown.core :as mp]
+            [emoji.core :as emoji]
             ))
 
 (defn get-posts-map [db]
@@ -30,20 +31,23 @@
               (map #(:post/path %) posts-map)
               (map :post/title posts-map))])))
 
-(defn add-date [posts-map]
-  (let [posts-time (map #(time/ymd
-                          (time/->ldt
-                           (clojure.instant/read-instant-date (:post/time %))))
-                        posts-map)
-        posts-body (map md/md-to-html-string
-                        (map #(:post/body %)
-                             posts-map))]
-    (map #(hiccup/html %1 [:div "Published " %2])
-         posts-body posts-time)))
+(defn format-posts-time [posts-map]
+  (map #(time/ymd
+         (time/->ldt
+          (clojure.instant/read-instant-date (:post/time %))))
+       posts-map))
+
+(defn format-posts-body [posts-map]
+  (map md/md-to-html-string
+       (map #(emoji/emojify (:post/body %))
+            posts-map)))
 
 (defn format-posts [db]
-  (let [posts-map (get-posts-map db)]
-    (add-date posts-map)))
+  (let [posts-map (get-posts-map db)
+        posts-time (format-posts-time posts-map)
+        posts-body (format-posts-body posts-map)]
+    (map #(hiccup/html %1 [:div "Published " %2])
+         posts-body posts-time)))
 
 (comment
   (let [conn (database/db-conn)
