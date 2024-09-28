@@ -20,5 +20,6 @@
          [:a {:href "/public/about.html"} "About"]]]]
       page]
      [:footer
-      [:p "Copyright © 2023-2024 Gabriel Marin"]]]))
+      [:p "Copyright © 2023-2024 Gabriel Marin"]
+      [:a {:href "https://github.com/gbrlmarn"} "github"]]]))
 
