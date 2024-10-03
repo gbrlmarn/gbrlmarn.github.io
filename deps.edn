@@ -9,7 +9,8 @@
         mapdown/mapdown {:mvn/version "0.2.1"}
         mount/mount {:mvn/version "0.1.19"}
         prone/prone {:mvn/version "2021-04-23"}
-        dawran6/emoji {:mvn/version "0.1.5"}}
+        dawran6/emoji {:mvn/version "0.1.5"}
+        clj-pdf/clj-pdf {:mvn/version "2.6.8"}}
  :aliases
  {:server {:main-opts ["-m" "blog.dev"]}
   :build {:exec-fn blog.core/export!}}}

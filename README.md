@@ -1,13 +1,13 @@
-# gabri3lmarin.github.io
-Simple blog written in Clojure.
+# gbrlmarn.github.io
+Personal website written in Clojure.
 
 ## Build site
 ``` sh
-lein build-site
+clj -X:build
 ```
 
 ## Live development
 ``` sh
-lein ring server
+clj -M:server
 ```
 
